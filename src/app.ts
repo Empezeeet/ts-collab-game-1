@@ -1,3 +1,6 @@
+import { updateEnergyBar } from "./ui.js"
+
+
 // WSPOLNY KONTRAKT: nazwy zmiennych i funkcji uzgadnia caly zespol.
 const MAKS_ENERGIA: number = 10;
 let pokoj: number = 1;
@@ -20,12 +23,14 @@ function start() {
   wygrana = false;
   iloscRuchow = 0;
   console.log("UCIECZKA Z SERWEROWNI. Zasilanie awaryjne wystarczy na 10 tur.");
+  updateEnergyBar(energia);
   pomoc();
   rozejrzyj();
 }
 
 function zakonczTure() {
   energia = energia - 1;
+  updateEnergyBar(energia);
   console.log("Pozostala energia: " + energia);
   if (wygrana) {
     console.log("WYGRANA! Drzwi otwarte. Mozesz wrocic do domu.");
