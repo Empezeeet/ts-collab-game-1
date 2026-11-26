@@ -7,6 +7,7 @@ let bezpiecznik: boolean = false;
 let zasilanie:boolean = false;
 let koniec:boolean = false;
 let wygrana:boolean = false;
+let iloscRuchow: number = 0;
 
 // SEKCJA 0 — GOTOWY SILNIK NAUCZYCIELA
 function start() {
@@ -17,6 +18,7 @@ function start() {
   zasilanie = false;
   koniec = false;
   wygrana = false;
+  iloscRuchow = 0;
   console.log("UCIECZKA Z SERWEROWNI. Zasilanie awaryjne wystarczy na 10 tur.");
   pomoc();
   rozejrzyj();
@@ -61,6 +63,7 @@ function status_gry() {
   console.log(`Bezpiecznik: ${bezpiecznik ? "tak" : "nie"}`)
   console.log(`Zasilanie: ${zasilanie ? "tak" : "nie"}`)
   console.log(`Stan gry: ${koniec ? "koniec" : "trwa"}`)
+  console.log(`Ilosc Ruchow: ${iloscRuchow}`);
 
 }
 function mapa() {
