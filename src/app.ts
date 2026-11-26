@@ -160,7 +160,8 @@ function akcja(co: string) {
       break;
     }
     case "napraw": {
-      if (pokoj !== 3 || bezpiecznik || zasilanie) {
+      if (pokoj !== 3 || !bezpiecznik || zasilanie) {
+        console.log(`${pokoj} || ${!bezpiecznik} || ${zasilanie}`)
         console.log("nie mozesz naprawic");
         return;
       }

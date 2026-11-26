@@ -1,0 +1,1 @@
+run with ```npx tsc src/app.ts --target ES2020 --outDir .```
